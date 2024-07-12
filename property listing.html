@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Listing</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-group {
+    width: calc(50% - 10px);
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  select, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Property Listing Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="property-type">Property Type:</label>
+        <select id="property-type">
+          <option value="house">House</option>
+          <option value="apartment">Apartment</option>
+          <option value="condo">Condo</option>
+          <option value="townhouse">Townhouse</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location">
+      </div>
+      <div class="form-group">
+        <label for="min-price">Min Price:</label>
+        <select id="min-price">
+          <option value="0">$0</option>
+          <option value="100000">$100,000</option>
+          <option value="200000">$200,000</option>
+          <option value="300000">$300,000</option>
+          <option value="400000">$400,000</option>
+          <option value="500000">$500,000</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="max-price">Max Price:</label>
+        <select id="max-price">
+          <option value="100000">$100,000</option>
+          <option value="200000">$200,000</option>
+          <option value="300000">$300,000</option>
+          <option value="400000">$400,000</option>
+          <option value="500000">$500,000</option>
+          <option value="1000000">$1,000,000</option>
+          <option value="2000000">$2,000,000</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="bedrooms">Bedrooms:</label>
+        <select id="bedrooms">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="bathrooms">Bathrooms:</label>
+        <select id="bathrooms">
+          <option value="1">1</option>
+          <option value="2">2</option>          
+          <option value="3">3</option>
+          <option value="4">4+</option>        
+</select>
+      </div>
+<div class="form-group">
+        <label for="balcony">Balconies:</label>
+        <select id="balconies">
+          <option value="1">1</option>
+          <option value="2">2</option>          
+          <option value="3">3+</option>
+                 
+</select></div><br>
+<br><div class="form-group">
+        <label for="Directions">Directions:</label>
+        <select id="Directions">
+          <option value="north">North</option>
+          <option value="south">South</option>
+          <option value="east">East</option>
+          <option value="west">West</option>
+          <option value="north-east">North-East</option>
+          <option value="south-east">South-East</option>
+          <option value="north-west">North-West</option>
+          <option value="south-west">South-West</option>
+</select>
+      </div>  
+<br><fieldset>
+                    <legend>Property Features and Amenities</legend>
+                    <label for="furnished">Furnished:</label>
+                    <input type="checkbox" id="furnished" name="furnished" value="yes">
+                    <label for="non-veg-allowed">Non-Veg Allowed:</label>
+                    <input type="checkbox" id="non-veg-allowed" name="non-veg-allowed" value="yes">
+                    <br><br>
+                    <label for="parking">Parking Spaces:</label>
+                    <input type="number" id="parking" name="parking"><br><br>
+                </fieldset>
+      <br><div class="form-group">
+        <label for="features">Features:</label>
+        <input type="checkbox" id="features-pool">
+        <label for="features-pool">Swimming Pool</label>
+        <input type="checkbox" id="features-garage">
+        <label for="features-garage">Garage</label>
+        <input type="checkbox" id="features-garden">
+        <label for="features-garden">Garden</label>
+      </div>
+      <div class="form-group" style="width: 100%;">
+<br><div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeAH6qcPYuNQK4Hv1wudkXR_fyWkiba1E&callback=myMap"></script>
+
+ <br><fieldset>
+                    <legend>Property Photos</legend>
+                    <input type="file" id="property-photos" name="property-photos" multiple accept="image/*"><br><br>
+                </fieldset>
+        <br><button type="submit" class="btn">Search</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

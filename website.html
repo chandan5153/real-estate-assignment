@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Real Estate</div>
+        <nav>
+            <ul>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#my-activity">My Activity</a></li>
+                <li><a href="property listing.html">List Your Property</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#more">More</a></li>
+            <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                   <option value="hi">Hindi</option>
+                    <option value="fr">French</option>
+                </select>
+            <div class="profile">
+                <img src="C:\Users\USER\Pictures\images.png" alt="Profile Image">
+                
+</ul>
+            </div>
+        </nav>
+    </header>
+
+   <main>
+        <div class="container">
+            <section class="content">
+                <!-- Left side content -->
+                <div class="left-side">
+                    <h1>Sell or Rent your Property For Free</h1>
+                    <p>Whether you're ready to sell or looking for answers,we'll guide you with data and expertise specific to your needs.</p><br>
+                <h2> Upload your property in 4 simple steps <h2> <br>
+              
+               <p>&#9989 Add your properties basic details<br>
+                 &#9989 Add property location<br>
+                 &#9989 Add property features and amenities<br>
+                 &#9989 Add price details<br>
+                 &#9989 Add your best property shots</p>
+                  
+                 </div>
+                
+                
+        
+            <div class="scrolling-content">
+                
+<h2>LETS GET YOU STARTED!</h2>
+<label>I am: <span style="color: red;">*</span></label>
+
+        <div>
+           <br><input type="radio" id="Owner" name="I am:" value="Owner" required>
+            <label for="Owner">Owner</label>
+            <input type="radio" id="Builder" name="I am:" value="Builder">
+            <label for="Builder">Builder</label><br>                    
+
+<br><label for="name">Name <span style="color: red;">*</span></label>
+        <input type="text" id="name" name="name" required>
+<br><label for="country">Country <span style="color: red;">*</span></label><br>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="Ind">INDIA</option>
+        </select><br>
+ 
+<br><label for="email">Email <span style="color: red;">*</span></label>
+        <input type="text" id="Email" Email="Email" required>
+<br><p> or  </p>      
+
+    <form id="phoneForm">
+        <div class="phone-input">
+            <div class="country-code">
+                <label for="country-code">Country Code <span style="color: red;">*</span></label>
+                <select id="country-code" name="country-code" required>
+                    <option value="">Select Country Code</option>
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+49">+49 (Germany)</option>
+                    <!-- Add more country codes as needed -->
+                </select>
+            </div>
+            <div class="phone-number">
+                <label for="phone">Phone Number <span style="color: red;">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+            </div>
+        </div>
+
+        <button type="button" onclick="redirectToOTPForm()">Next</button>
+    </form>
+
+    <div id="otpForm" style="display: none;">
+        <h2>Enter OTP</h2>
+        <form>
+            <label for="otp">OTP <span style="color: red;">*</span></label>
+            <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+
+            <button type="submit">Submit OTP</button>
+        </form>
+    </div>
+
+    <script>
+        function redirectToOTPForm() {
+            // Hide the phone number form
+            document.getElementById("phoneForm").style.display = "none";
+            // Display the OTP form
+            document.getElementById("otpForm").style.display = "block";
+        }
+    </script>
+
+<p><a href="need help?">need help?call 9999999999 </a></p>
+ 
+</div></form>                      
+            </div>
+        
+    </main>
+
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
